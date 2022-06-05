@@ -9,8 +9,8 @@ makeCacheMatrix <- function(x = matrix()) {
             invers <<- NULL
           }
           get <- function() x
-          setInvers <- function(solveMatrix) m <<- solveMatrix
-          getmean <- function() invers
+          setInvers <- function(solveMatrix) invers <<- solveMatrix
+          getInvers <- function() invers
           list(set = set, get = get,
                setInvers = setInvers,
                getInvers = getInvers)
